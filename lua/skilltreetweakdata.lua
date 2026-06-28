@@ -41,11 +41,17 @@ local preserved_skills = {
 Hooks:PostHook(SkillTreeTweakData, "init", "init_sss", function (self, tweak_data)
 	for skill_name, skill_data in pairs(self.skills) do
 		local preserve = preserved_skills[skill_name]
-		
+
 		if preserve ~= true then
+			if preserve == nil then
+				-- skill_data.name_id = "sss_skill_disabled"
+				skill_data.desc_id = "sss_skill_disabled_desc"
+			end
+
 			for tier_index, tier_data in ipairs(skill_data) do
 				if preserve == nil or not preserve[tier_index] then
 					tier_data.upgrades = {}
+					tier_data.desc_id = "sss_tier_disabled_desc"
 				end
 			end
 		end
