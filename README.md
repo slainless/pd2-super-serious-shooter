@@ -21,6 +21,8 @@ This fork brings back skills to restore stealth support and equipment-related up
     - Revert free silent sentry gun
     - Revert additional asset. Must be unlocked via Sixth Sense
 
+As a consequence, loud heists can benefit from the stealth skills and/or enginering skills all the time since you can practically build a dedicated skillset that picks only the preserved skills. This of course will be quite broken for certain cases, such as skipping saw in favor of nimble (lockpicking) skill in some heist.
+
 ### Preserved skills
 
 Skills that affect stealth run, equipment, or cable ties are preserved. The changes, however, are opinionated but it should be easy to tweak via the source code
