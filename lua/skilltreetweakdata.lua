@@ -1,7 +1,53 @@
+local preserved_skills = {
+	-- mastermind
+		-- medic
+			tea_cookies = true, -- uppers
+			medic_2x = true, -- combat doctor
+		-- controller
+			triathlete = {[1]=true}, -- forced friendship
+			stockholm_syndrome = true,
+	-- enforcer
+		-- tank
+			pack_mule = {[1]=true}, -- transporter
+		-- ammo specialist
+			portable_saw = {[1]=true},
+			ammo_2x = true, -- extra lead
+			bandoliers = {[1]=true}, -- fully loaded
+	-- technician
+		-- engineer
+			jack_of_all_trades = true,
+			tower_defense = true,
+		-- breacher
+			hardware_expert = true,
+			drill_expert = true, -- drill sawgeant
+			more_fire_power = true,
+			kick_starter = true,
+	-- ghost
+		-- shinobi
+			jail_workout = true, -- chameleon
+			cleaner = true, -- cleaner
+			chameleon = true, -- sixth sense
+			second_chances = true, -- nimble
+			ecm_booster = true, -- ecm overdrive
+			ecm_2x = true, -- ecm specialist
+		-- artful dodger
+			awareness = true, -- parkour
+			thick_skin = true, -- inner pocket
+		-- silent killer
+			optic_illusions = {[2]=true},
+			hitman = {[2]=true}, -- high value target
+}
+
 Hooks:PostHook(SkillTreeTweakData, "init", "init_sss", function (self, tweak_data)
-	for _, skill_data in pairs(self.skills) do
-		for _, tier_data in ipairs(skill_data) do
-			tier_data.upgrades = {}
+	for skill_name, skill_data in pairs(self.skills) do
+		local preserve = preserved_skills[skill_name]
+		
+		if preserve ~= true then
+			for tier_index, tier_data in ipairs(skill_data) do
+				if preserve == nil or not preserve[tier_index] then
+					tier_data.upgrades = {}
+				end
+			end
 		end
 	end
 
