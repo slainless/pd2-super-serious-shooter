@@ -1,5 +1,5 @@
 Hooks:PreHook(PlayerInventoryGui, "create_box", "create_box_sss", function (self, params)
-	if params.name == "skilltree" or params.name == "specialization" then
+	if params.name == "specialization" then
 		params.text = "DISABLED"
 		params.text_selected_color = tweak_data.screen_colors.important_1
 		params.image = "guis/textures/pd2/none_icon"
