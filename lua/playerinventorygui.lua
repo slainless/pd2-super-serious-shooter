@@ -6,7 +6,5 @@ Hooks:PreHook(PlayerInventoryGui, "create_box", "create_box_sss", function (self
 		params.texture_rect = nil
 		params.image_rect = nil
 		params.image_size_mul = 1.5
-	elseif params.image == "guis/textures/pd2/inv_skillcards_icons" then
-		params.alpha = 0
 	end
 end)
