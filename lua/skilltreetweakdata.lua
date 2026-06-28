@@ -16,7 +16,7 @@ local preserved_skills = {
 	-- technician
 		-- engineer
 			jack_of_all_trades = true,
-			tower_defense = true,
+			tower_defense = true, -- engineering
 		-- breacher
 			hardware_expert = true,
 			drill_expert = true, -- drill sawgeant

@@ -7,6 +7,56 @@ You may try and use another mod that improves enemy AI (such as REAI, LIES or FS
 
 This mod doesn't touch your save file, skills or inventory.
 
+## Difference from upstream
+
+This fork brings back skills to restore stealth support and equipment-related upgrades:
+- Selectively enabling skills
+- Revert bag carry tweak
+- Restore default player upgrades:
+    - Silent killing when undetected
+    - Reenable walk and crouch speed multiplier
+    - Reenable carry interact and movement speed multiplier
+    - Trip mine sensor
+    - Reenable ECM jammer feedback, retrigger, and interaction speed multiplier
+    - Revert free silent sentry gun
+    - Revert additional asset. Must be unlocked via Sixth Sense
+
+### Preserved skills
+
+Skills that affect stealth run, equipment, or cable ties are preserved. The changes, however, are opinionated but it should be easy to tweak via the source code
+
+- Mastermind
+    - Medic
+        - **Uppers**. Note: Ace upgrade deviate from SSS core idea but I can't be bothered to disable the auto apply kit mechanic.
+        - **Combat Doctor**: Extra doctor bag
+    - Controller
+        - **Forced Friendship** base skill: Extra cable ties
+        - **Stockholm Syndrome**: Allow intimidation stealth build
+- Enforcer
+    - Tank
+        - **Transporter** base skill: Allow long bag throw
+    - Ammo Specialist
+        - **Portable Saw** base skill: Allow secondary saw
+        - **Extra Lead**: Extra ammo bag & capacity
+        - **Fully Loaded**: Extra ammo capacity
+- Technician
+    - Engineer
+        - **Jack of All Trades**: Allow extra deployable & faster interaction
+        - **Tower Defense**: Silent & extra sentry
+    - Breacher
+        - **Hardware Expert**: Silent drill, drill boost, and tirp mine deploy boost
+        - **Drill Sawgeant**: Drill time boost
+        - **More Firepower**: Extra trip mine
+        - **Kickstarter**: Drill restart bonus
+- Ghost
+    - Shinobi: Full tree supported
+    - Artful Dodger
+        - **Parkour**: Bonus movement speed for stealth build
+        - **Inner Pocket**: Concealment bonus
+    - Silent Killer
+        - **Optic Illusions** ace skill: Bonus concealment for silenced weapons
+        - **High Value Target**: Marking duration boost. The damage bonus is a bit broken and i will probably try to reduce this buff later.
+
 ## Player Changes
 
 - All skill and perk deck effects (including most default upgrades) are disabled
