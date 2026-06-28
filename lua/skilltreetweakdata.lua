@@ -46,6 +46,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "init_sss", function (self, tweak_dat
 			if preserve == nil then
 				-- skill_data.name_id = "sss_skill_disabled"
 				skill_data.desc_id = "sss_skill_disabled_desc"
+				skill_data.icon_xy = {0,0} -- not done yet icon
 			end
 
 			for tier_index, tier_data in ipairs(skill_data) do
