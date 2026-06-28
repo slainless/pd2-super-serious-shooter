@@ -15,8 +15,9 @@ local preserved_skills = {
 			bandoliers = {[1]=true}, -- fully loaded
 	-- technician
 		-- engineer
+			engineering = {[1]=true},
 			jack_of_all_trades = true,
-			tower_defense = true, -- engineering
+			tower_defense = true,
 		-- breacher
 			hardware_expert = true,
 			drill_expert = true, -- drill sawgeant
